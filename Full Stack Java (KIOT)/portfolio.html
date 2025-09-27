@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>My Personal Webpage</title>
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Slick Slider CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: url('images/background.jpg') no-repeat center center fixed;
+      background-size: cover;
+      color: white;
+    }
+
+    .navbar-custom {
+      background-color: rgba(0, 0, 0, 0.8);
+    }
+
+    .content-section {
+      display: none;
+      padding: 50px;
+      background-color: rgba(0, 0, 0, 0.7);
+      margin: 30px;
+      border-radius: 12px;
+    }
+    .contact-section {
+        margin-left: 290px;
+        margin-top: 30px;
+        width: 560px;
+        display: none;
+      padding: 30px;
+      background-color: rgba(0, 0, 0, 0.7);
+      /* margin: 30px; */
+      border-radius: 12px;
+    }
+      .calendar-section {
+      margin-left: 290px;
+        margin-top: 30px;
+        width: 560px;
+        height: 500px;
+        display: none;
+      padding: 30px;
+      background-color: rgba(0, 0, 0, 0.7);
+      /* margin: 30px; */
+      border-radius: 12px;
+    }
+      .about-section  img {
+      margin-left: 290px;
+        margin-top: 30px;
+        width: 700px;
+        height: 500px;
+        display: none;
+      padding: 30px;
+      border-radius: 12px;
+    }
+      /* .gallery-section {
+      margin-left: 290px;
+        margin-top: 30px;
+        width: 560px;
+        height: 500px;
+        display: none;
+      padding: 30px;
+      border-radius: 12px;
+    } */
+    .contact-section input  {
+        width: 500px;
+    }
+    .contact-section textarea {
+        width: 500px;
+    }
+    .card img
+    {
+        height: 100px;
+        width: 200px;
+    }
+
+    .slick-slide img {
+      width: 500px ;
+      border-radius: 10px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark navbar-custom">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">My Portfolio</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="#" onclick="showSection('home')">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="#" onclick="showSection('about')">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="#" onclick="showSection('profile')">Profile</a></li>
+          <li class="nav-item"><a class="nav-link" href="#" onclick="showSection('achievements')">Achievements</a></li>
+          <li class="nav-item"><a class="nav-link" href="#" onclick="showSection('interests')">Interests</a></li>
+          <li class="nav-item"><a class="nav-link" href="#" onclick="showSection('calendar')">Calendar</a></li>
+          <li class="nav-item"><a class="nav-link" href="#" onclick="showSection('contact')">Contact</a></li>
+          <li class="nav-item"><a class="nav-link" href="#" onclick="showSection('map')">Map</a></li>
+          <li class="nav-item"><a class="nav-link" href="#" onclick="showSection('gallery')">Gallery</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Sections -->
+  <div id="home" class="content-section">
+    <h1 class="display-4">Welcome to My Personal Webpage</h1>
+    <p class="lead">Explore my professional journey and interests.</p>
+  </div>
+
+  <div id="about" class="about-section">
+    <h2>About Me</h2>
+    <p>I am a passionate web developer with goals to build meaningful digital experiences.</p>
+    <div class="card" style="width: 18rem;">
+      <img src="/blue-circle-with-white-user_78370-4707.avif" class="card-img-top" alt="Profile">
+      <div class="card-body">
+        <p class="card-text">Education: B.E in Computer Science<br>Career Goal: Full-stack Web Developer</p>
+      </div>
+    </div>
+  </div>
+
+  <div id="profile" class="content-section">
+    <h2>My Profile</h2>
+    <p>Skills and strengths:</p>
+    <div class="progress mb-2">
+      <div class="progress-bar" style="width: 90%">HTML/CSS - 90%</div>
+    </div>
+    <div class="progress mb-2">
+      <div class="progress-bar" style="width: 80%">JavaScript - 80%</div>
+    </div>
+    <a href="documents/resume.pdf" class="btn btn-light mt-3" download>Download Resume</a>
+  </div>
+
+  <div id="achievements" class="content-section">
+    <h2>Achievements</h2>
+    <ul>
+      <li>Won Hackathon 2023</li>
+      <li>Top 10 in CodeFest</li>
+      <li></li>
+      <li>Top 10 in CodeFest</li>
+    </ul>
+  </div>
+
+  <div id="interests" class="content-section">
+    <h2>Interests</h2>
+    <p>I enjoy coding, blogging, and making educational videos.</p>
+    <!-- <iframe width="100%" height="315" src="https://www.youtube.com/embed/dQw4w9WgXcQ" frameborder="0" allowfullscreen></iframe> -->
+    <iframe width="590" height="315" src="https://www.youtube.com/embed/eNvUS-6PTbs?si=m4CcGOEM70xcFu95" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</div>
+
+  <div id="calendar" class="calendar-section">
+    <h2>My Google Calendar</h2>
+    <iframe src="https://calendar.google.com/calendar/embed?src=your_calendar_id&ctz=Asia%2FKolkata" style="border: 0" width="500px" height="400px" frameborder="0" scrolling="no"></iframe>
+  </div>
+
+  <div id="contact" class="contact-section">
+    <h2>Contact Me</h2>
+    <form onsubmit="return validateContactForm()">
+      <input class="form-control mb-2" type="text" id="name" placeholder="Name">
+      <input class="form-control mb-2" type="email" id="email" placeholder="Email">
+      <input class="form-control mb-2" type="tel" id="tel" placeholder="Phone Number">
+      <textarea class="form-control mb-2" id="message" placeholder="Your Message"></textarea>
+      <center>
+      <button class="btn btn-primary" type="submit">Send</button>
+      </center>
+    </form>
+  </div>
+
+  <div id="map" class="content-section">
+    <h2>My Location</h2>
+    <iframe src="https://www.google.com/maps/embed?pb=your_map_embed_code" width="100%" height="450" frameborder="0" allowfullscreen></iframe>
+  </div>
+
+  <div id="gallery" class="content-section">
+    <h2>Image Gallery</h2>
+    <div class="gallery-slider">
+      <div><img src="/Screenshot 2025-05-18 185934.png" alt="Gallery Image 1" height="400px"></div>
+      <div><img src="/Screenshot 2025-05-18 191412.png" alt="Gallery Image 2" height="400px"></div>
+      <div><img src="/Screenshot 2025-05-18 191541.png" alt="Gallery Image 3" height="400px"></div>
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+
+  <script>
+    function showSection(id) {
+      $(".content-section").hide();
+      $("#" + id).fadeIn(700);
+    }
+
+    function validateContactForm() {
+      let name = $("#name").val();
+      let email = $("#email").val();
+      let message = $("#message").val();
+      if (!name || !email || !message) {
+        alert("Please fill out all fields.");
+        return false;
+      }
+      alert("Message sent successfully!");
+      return false; // prevent real submission
+    }
+
+    $(document).ready(function () {
+      showSection("home");
+      $('.gallery-slider').slick({
+        infinite: true,
+        slidesToShow: 1,
+        // arrows: true,
+        autoplay: true,
+        autoplaySpeed: 2000
+      });
+    });
+  </script>
+</body>
+</html>
